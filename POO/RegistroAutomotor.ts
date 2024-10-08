@@ -1,3 +1,8 @@
+import { Auto } from "./Auto"
+import { Moto } from "./Moto"
+import { Camion } from "./Camion"
+
+
 export class RegistroAutomotor{
 
     private autos: Auto[]
@@ -13,7 +18,6 @@ export class RegistroAutomotor{
     public getAutos(): Auto[] {
         return [...this.autos]
     }
-
 
     public getMotos(): Moto[] {
         return [...this.motos]
@@ -64,66 +68,14 @@ export class RegistroAutomotor{
 }
 
 
-
-class Auto{
-    private patente:string
-    
-
-    constructor(patente:string){
-        this.patente = patente
-        
-    }
-
-    public getPatente():string{
-        return this.patente
-    }
-    public setPatente(patente:string){
-        this.patente = patente
-    }
-
-    
-
-}
-
-class Moto{
-    private patente:string
-    
-    constructor(patente:string){
-        this.patente = patente
-        
-    }
-
-    public getPatente():string{
-        return this.patente
-    }
-    public setPatente(patente:string){
-        this.patente = patente
-    }
-}
-
-class Camion{
-    private patente:string
-    
-    constructor(patente:string){
-        this.patente = patente
-        
-    }
-
-    public getPatente():string{
-        return this.patente
-    }
-    public setPatente(patente:string){
-        this.patente = patente
-    }
-}
-
 const registro = new RegistroAutomotor()
 
-const auto1 = new Auto("ABC 123")
-const auto2 = new Auto("EFE 323")
-const moto1 = new Moto("XYZ 456")
-const moto2 = new Moto("ASW 541")
-const camion = new Camion("ERE 343")
+const auto1 = new Auto("ABC 123","alfa romeo")
+const auto2 = new Auto("EFE 323","fiat")
+const moto1 = new Moto("XYZ 456","zanella")
+const moto2 = new Moto("ASW 541","mondial")
+const camion = new Camion("ERE 343","scania")
+const camion2= new Camion("AFA 333","mercedes")
 
 registro.agregarVehiculo(auto1) 
 registro.agregarVehiculo(auto2) 
@@ -131,11 +83,12 @@ registro.agregarVehiculo(moto1)
 registro.agregarVehiculo(moto2) 
 registro.agregarVehiculo(camion)
 
-console.log(registro.getAutos()) 
-console.log(registro.getMotos()) 
-console.log(registro.getCamiones())
+console.log('Get autos: ',registro.getAutos()) 
+console.log('Get motos: ',registro.getMotos()) 
+console.log('Get camiones: ',registro.getCamiones())
 registro.darVehiculoDeBaja(auto1)
 console.log(registro.getAutos())
+console.log('get marca camion 2: ',camion2.getMarca())
 
 registro.modificarVehiculo(auto2,'ARH 400')
 
