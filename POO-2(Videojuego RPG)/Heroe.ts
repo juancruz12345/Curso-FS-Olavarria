@@ -31,8 +31,10 @@ export class Heroe{
     public setNombre(nombre:string){
         this.nombre=nombre
     }
-    public setNivel(nivel:number){
-        this.nivel=nivel
+    public setNivel(){
+        
+        this.nivel=this.nivel+1
+        console.log('subiste de nivel. Nivel actual: ',this.nivel)
     }
     public setPuntosDeVida(puntos:number){
         this.puntosDeVida=puntos

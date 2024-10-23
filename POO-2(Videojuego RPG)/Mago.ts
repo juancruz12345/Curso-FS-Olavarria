@@ -29,4 +29,8 @@ export class Mago extends Heroe{
     public setPuntosDeMana(costo:number){
         this.puntosDeMana=this.puntosDeMana-costo
     }
+    public setHabilidad(){
+        console.log('nueva habilidad aprendida: Rayo congelante')
+        this.habilidad='Rayo congelante'
+    }
 }

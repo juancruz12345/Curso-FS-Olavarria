@@ -29,4 +29,8 @@ export class Arquero extends Heroe{
     public setCantFlechas(costo:number){
         this.cantFlechas=this.cantFlechas-costo
     }
+    public setHabilidad(){
+        console.log('nueva habilidad aprendida: Flecha envenenada')
+        this.habilidad='Flecha envenenada'
+    }
 }

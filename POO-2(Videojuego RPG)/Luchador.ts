@@ -29,4 +29,8 @@ export class Luchador extends Heroe{
     public setPuntosDeStamina(costo:number){
         this.puntosDeStamina=this.puntosDeStamina-costo
     }
+    public setHabilidad(){
+        console.log('nueva habilidad aprendida: Guillotina')
+        this.habilidad='Guillotina'
+    }
 }
